@@ -207,6 +207,8 @@ html body{background:radial-gradient(130% 95% at 50% 38%,#58351b 0%,#3e2512 52%,
 @media (max-width:430px){.pq.sm::before{display:none}#pz .pq.mn .nm::before{display:none}#pz .pq.nx:not(.on) .nm::after{display:none}}
 html{background:#26140a}
 @media (display-mode:standalone){:root{padding-top:0!important;padding-bottom:0!important}}
+/* مسافة تحت شريط الحالة عند التشغيل كتطبيق */
+#sp,#ad,#am,#ae,#as,#hm,#gm,#qb,#qr,#nw,#mk,#sk,#fk,#qv,#nh,#hz,#qn{padding-top:env(safe-area-inset-top,0px)!important;box-sizing:border-box}
 @media (max-width:350px){#pz .pq .nm{font-size:14px!important}#pz .pq .tm{font-size:12.5px!important}#pz .pq{padding-inline:6px!important}}
 /* تفاعل هادئ عند الضغط */
 #gear,#hisn,#hd .sq,.sk2,.pq.sm,.hb{transition:transform .14s ease,filter .14s ease,box-shadow .14s ease;-webkit-tap-highlight-color:transparent}
@@ -797,7 +799,7 @@ $('qnb').addEventListener('click',e=>{const t=e.target.closest('[data-t]');if(t)
  const sl=e.target.closest('[data-sl]');if(sl){document.querySelectorAll('[data-sl]').forEach(x=>x.classList.remove('on'));sl.classList.add('on');return}
  if(e.target.closest('#qngo')){const p=document.querySelector('[data-sp].on').dataset.sp,l=document.querySelector('[data-sl].on').dataset.sl;$('qnres').innerHTML=qnPick(p,l)}});
 
-const APPV='118';
+const APPV='119';
 function updCheck(auto){const m=$('updm');$('updv').textContent=APPV;if(!auto)m.innerHTML='النسخة الحالية: <b>'+APPV+'</b> · جارٍ البحث…';
  let u;try{u=location.href.split('#')[0].split('?')[0]}catch(e){u=''}
  if(window.__SA&&!/^https?:/.test(u)){if(!auto)m.innerHTML='هذه نسخة مستقلة (رقم '+APPV+').';return}if(!/^https?:/.test(u)){if(!auto){m.innerHTML='تعذّر البحث هنا. جارٍ إعادة تحميل الصفحة…';setTimeout(()=>location.reload(),600)}return}
